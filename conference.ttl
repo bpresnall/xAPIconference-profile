@@ -1,0 +1,50 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/xapi/conference> a <https://w3id.org/xapi/profiles/ontology#Profile>;
+  dc:conformsTo <https://w3id.org/xapi/profiles#1.0>;
+  schema:author [
+    a schema:Organization;
+    schema:name "Jefferson Institute"
+  ];
+  rdfs:seeAlso <https://github.com/JI>;
+  skos:definition "The conference profile provides interoperable runtime communication between Conference website and LRS."@en;
+  skos:prefLabel "Conference Profile"@en;
+  <https://w3id.org/xapi/profiles/ontology#concepts> <https://w3id.org/xapi/conference/activity-types/page>,
+    <https://w3id.org/xapi/conference/activity-types/presentation>, <https://w3id.org/xapi/conference/activity-types/video>;
+  <https://w3id.org/xapi/profiles/ontology#templates> <https://w3id.org/xapi/conference/templates#initialized>,
+     <https://w3id.org/xapi/conference/templates#launched>,
+     <https://w3id.org/xapi/conference/templates#attended>,
+     <https://w3id.org/xapi/conference/templates#commented>,
+     <https://w3id.org/xapi/conference/templates#rated>,
+     <https://w3id.org/xapi/conference/templates#terminated>,
+
+
+<https://w3id.org/xapi/conference/activity-types/page> a <https://w3id.org/xapi/ontology#ActivityType>;
+  skos:definition "A single webpage with presentation or session content."@en;
+  skos:inScheme <https://w3id.org/xapi/conference>;
+  skos:prefLabel "page"@en .
+  
+<https://w3id.org/xapi/conference/activity-types/presentation> a <https://w3id.org/xapi/ontology#ActivityType>;
+  skos:definition "Presentation content."@en;
+  skos:inScheme <https://w3id.org/xapi/conference>;
+  skos:prefLabel "presentation"@en .
+  
+<https://w3id.org/xapi/acrossx/activities/video> a <https://w3id.org/xapi/ontology#ActivityType>;
+   skos:definition "A recording of audible and visual content intended to be shown on a video display."@en;
+   skos:exactMatch <https://w3id.org/xapi/video/activity-type/video>,
+     <http://activitystrea.ms/schema/1.0/video>;
+   skos:inScheme <https://w3id.org/xapi/conference>;
+   skos:prefLabel "video"@en .  
+
+
+
+
+
+<https://w3id.org/xapi/conference/v0.1> prov:generatedAtTime "2021-07-01T10:45:00Z"^^xsd:dateTime;
+  prov:wasRevisionOf <https://w3id.org/xapi/conference> .
