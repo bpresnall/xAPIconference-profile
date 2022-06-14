@@ -1,0 +1,332 @@
+{
+  "@context": "https://w3id.org/xapi/profiles/context",
+  "id": "https://w3id.org/xapi/conference",
+  "type": "Profile",
+  "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+  "prefLabel": {
+    "en": "Conference Profile"
+  },
+  "definition": {
+    "en": "The conference profile of the xAPI was created to identify and standardize the common types of interactions that can be tracked in conference websites."
+  },
+  "author": {
+    "type": "Organization",
+    "name": "Jefferson Institute - xAPI conference profile"
+  },
+  "concepts": [
+    {
+      "id": "https://w3id.org/xapi/conference/verbs/initialized",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+      "exactMatch": [  "http://id.tincanapi.com/verb/initialized "],
+      "definition": {
+        "en": "Indicates the actor logged in to the conference website."
+      },
+      "prefLabel": {
+        "en": "initialized"
+      }
+    },
+    {
+      "id": "https://w3id.org/xapi/conference/verbs/launched",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+      "exactMatch": [ "http://adlnet.gov/expapi/verbs/launched" ],
+      "definition": {
+        "en": "Indicates that the actor open page."
+      },
+      "prefLabel": {
+        "en": "launched"
+      }
+    },
+    {
+      "id": "https://w3id.org/xapi/conference/verbs/attended ",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	  "exactMatch": [ "http://adlnet.gov/expapi/verbs/attended" ],
+      "definition": {
+        "en": "Indicates the actor click on presentation link"
+      },
+      "prefLabel": {
+        "en": "attended"
+      }
+    },
+    {
+      "id": "https://w3id.org/xapi/conference/activity-type/commented",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	  "exactMatch": [ "http://adlnet.gov/expapi/verbs/commented" ],
+      "definition": {
+        "en": "Indicate the actor commented any content - click on send comment button. Result reponse is comment text"
+      },
+      "prefLabel": {
+        "en": "commented"
+      }
+    }, 
+	{
+      "id": "https://w3id.org/xapi/video/activity-type/played",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	  "exactMatch": [ "https://w3id.org/xapi/video/verbs/played" ],
+      "definition": {
+        "en": "Used when the actor played a video or clicked the play button. "
+      },
+      "prefLabel": {
+        "en": "played"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/video/activity-type/paused",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	  "exactMatch": [ "https://w3id.org/xapi/video/verbs/paused" ],
+      "definition": {
+        "en": "Indicates that the actor temporary or permanently stopped experiencing the recorded media object "
+      },
+      "prefLabel": {
+        "en": "paused"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/video/activity-type/seeked",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	  "exactMatch": [ "https://w3id.org/xapi/video/verbs/seeked" ],
+      "definition": {
+        "en": "Used in combination with time-from and time-to extensions when the Actor moves the progress bar forward or backward to a specific time in the video."
+      },
+      "prefLabel": {
+        "en": "seeked"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/video/activity-type/interacted",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	   "exactMatch": [ "http://adlnet.gov/expapi/verbs/interacted" ],
+      "definition": {
+        "en": "Used to express that the actor interacted with the player (except play, pause, seek). e.g. mute, unmute, change resolution, change player size"
+      },
+      "prefLabel": {
+        "en": "interacted"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/video/activity-type/completed",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	  "exactMatch": [ "http://adlnet.gov/expapi/verbs/completed" ],
+      "definition": {
+        "en": "Used to express that the actor completed a video by watching all parts of the video at least once."
+      },
+      "prefLabel": {
+        "en": "completed"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/activity-type/terminated",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "Verb",
+	   "exactMatch": [ "http://adlnet.gov/expapi/verbs/terminated" ],
+      "definition": {
+        "en": "Used to express that the actor completed a video by watching all parts of the video at least once or terminated session on website (logged out)."
+      },
+      "prefLabel": {
+        "en": "terminated"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/activity-type/rated",
+      "inScheme": "https://w3id.org/xapi/rated",
+      "type": "Verb",
+	   "exactMatch": [ "http://id.tincanapi.com/verb/rated" ],
+      "definition": {
+        "en": "Used to rate presentation, result is in range (1,5)."
+      },
+      "prefLabel": {
+        "en": "terminated"
+      }
+    },
+	
+	{
+      "id": "https://w3id.org/xapi/conference/activity-type/page",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "ActivityType",
+      "definition": {
+        "en": "A webpage which includes presentations or discussions."
+      },
+      "prefLabel": {
+        "en": "page"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/activity-type/presentation",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "ActivityType",
+      "definition": {
+        "en": "A webpage with presentation."
+      },
+      "prefLabel": {
+        "en": "page"
+      }
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/activity-type/video",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "type": "ActivityType",
+      "definition": {
+        "en": "A recording of both the visual and audible components made available on a display screen."
+      },
+      "prefLabel": {
+        "en": "video"
+      }
+    }
+	
+    
+  ],
+  
+  "templates": [
+    {
+      "id": "https://w3id.org/xapi/conference/templates#initialized",
+      "inScheme": "https://w3id.org/xapi/conference/v1.0.3",
+      "prefLabel": {
+        "en": "Initialized"
+      },
+      "definition": {
+        "en": "The statement template associated with the actor logged in to the conference website."
+      },
+      "type":"StatementTemplate",
+      "verb": "http://id.tincanapi.com/verb/initialized",
+      "rules": [
+       
+      ]
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/templates#launched",
+      "inScheme": "https://w3id.org/xapi/conference/v1.0.3",
+      "prefLabel": {
+        "en": "Launched"
+      },
+      "definition": {
+        "en": "The statement template associated with the actor launch webpage with presentaiton."
+      },
+      "type":"StatementTemplate",
+      "verb": "http://adlnet.gov/expapi/verbs/launched",
+      "rules": [
+       
+      ]
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/templates#attended",
+      "inScheme": "https://w3id.org/xapi/conference/v1.0.3",
+      "prefLabel": {
+        "en": "Attended"
+      },
+      "definition": {
+        "en": "The statement template associated with the actor click on the presentaiton link."
+      },
+      "type":"StatementTemplate",
+      "verb": "http://adlnet.gov/expapi/verbs/attended",
+      "rules": [
+       
+      ]
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/templates#commented",
+      "inScheme": "https://w3id.org/xapi/conference/v1.0.3",
+      "prefLabel": {
+        "en": "Commented"
+      },
+      "definition": {
+        "en": "The statement template associated with the actor commented any content - click on send comment button. "
+      },
+      "type":"StatementTemplate",
+      "verb": "http://adlnet.gov/expapi/verbs/commented",
+      "rules": [
+                {
+                    "location": "result.response",
+                    "presence": "included"
+                }
+            ]
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/templates#rated",
+      "inScheme": "https://w3id.org/xapi/conference/v1.0.3",
+      "prefLabel": {
+        "en": "Rated"
+      },
+      "definition": {
+        "en": "The statement template associated with the actor rate presentation - clike on the rate link. "
+      },
+      "type":"StatementTemplate",
+      "verb": "http://id.tincanapi.com/verb/rated",
+      "rules": [
+                {
+                    "location": "result.response",
+                    "presence": "included"
+                }
+            ]
+    },
+	{
+      "id": "https://w3id.org/xapi/conference/templates#terminated",
+      "inScheme": "https://w3id.org/xapi/conference",
+      "prefLabel": {
+        "en": "Terminated"
+      },
+      "definition": {
+        "en": "The statement template and rules associated with a terminating the session on the website."
+      },
+      "type":"StatementTemplate",
+      "verb": "http://adlnet.gov/expapi/verbs/terminated",
+      "objectActivityType": "https://w3id.org/xapi/conference/activity-type/page",
+      "rules": [
+        
+      ]
+    }
+    
+    
+  ],
+  "patterns": [
+      {
+         "id": "https://w3id.org/xapi/conference/patterns#generalpattern",
+         "inScheme": "https://w3id.org/xapi/conference",
+         "type":"Pattern",
+         "primary": true,
+         "prefLabel": {
+           "en": "General Pattern"
+         },
+          "definition": {
+              "en": "The general pattern and sequence of Statement templates using the Conference Profile."
+          },
+          "sequence": ["https://w3id.org/xapi/conference/templates#initialized", "https://w3id.org/xapi/conference/patterns#optionalmiddlestatements", "https://w3id.org/xapi/conference/templates#terminated"]
+      },
+      {
+          "id": "https://w3id.org/xapi/conference/patterns#all-activities-pattern",
+          "inScheme": "https://w3id.org/xapi/conference/v1.0.3",
+          "type":"Pattern",
+          "prefLabel": {
+            "en": "All Activities Pattern"
+          },
+           "definition": {
+               "en": "All of the Conference Profile statement templates."
+           },
+          "alternates": ["https://w3id.org/xapi/conference/templates#launched", "https://w3id.org/xapi/conference/templates#attended", "https://w3id.org/xapi/conference/templates#commented",
+          "https://w3id.org/xapi/conference/templates#rated",
+		  "https://w3id.org/xapi/video/templates#played", "https://w3id.org/xapi/video/templates#paused", "https://w3id.org/xapi/video/templates#seeked", "https://w3id.org/xapi/video/templates#volumechange", "https://w3id.org/xapi/video/templates#screenchange", "https://w3id.org/xapi/video/templates#closed-captioning", "https://w3id.org/xapi/video/templates#completed"]
+      },
+      {
+          "id": "https://w3id.org/xapi/conference/patterns#optionalmiddlestatements",
+          "inScheme": "https://w3id.org/xapi/conference",
+          "type":"Pattern",
+          "prefLabel": {
+            "en": "Optional Middle Statements"
+          },
+           "definition": {
+               "en": "A combined pattern of zero or more Conference Profile standard statement templates that can be used with the general pattern."
+           },
+     
+			"zeroOrMore": "https://w3id.org/xapi/conference/patterns#all-activities-pattern"
+
+      }
+
+  ]
+}
